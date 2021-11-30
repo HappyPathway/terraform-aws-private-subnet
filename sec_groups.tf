@@ -1,6 +1,6 @@
 resource "aws_security_group" "admin" {
   name   = "${aws_subnet.subnet.id}-subnet-admin"
-  vpc_id = "${var.vpc_id}"
+  vpc_id = var.vpc_id
 
   ingress {
     from_port = 22
