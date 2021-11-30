@@ -13,5 +13,5 @@ resource "aws_security_group" "admin" {
     create_before_destroy = true
   }
 
-  tags = "${var.resource_tags}"
+  tags = merge({ "Name" = var.network_name }, var.resource_tags)
 }
